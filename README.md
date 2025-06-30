@@ -1,0 +1,1 @@
+i just created a responsive UI that shows the realtime data sent to the database through PIR sensor readings ie attached further to the circuit. This is a part of my IOT project done by myself..Though some changes still needs to be done and I am currently working on it to get it done. :)
