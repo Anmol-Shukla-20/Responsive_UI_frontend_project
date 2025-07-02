@@ -22,6 +22,8 @@ async function fetchMotionData() {
   try {
     const res = await fetch(FIREBASE_URL);
     const data = await res.json();
+    console.log(data);
+    
     const tbody = document.getElementById("motionData");
     tbody.innerHTML = "";
 
@@ -39,14 +41,29 @@ async function fetchMotionData() {
 
       const timeCell = document.createElement("td");
       if (entry.timestamp && !isNaN(entry.timestamp)) {
-        // If your timestamps are in seconds, use * 1000
-        timeCell.textContent = new Date(entry.timestamp * 1000).toLocaleString();
+        // Debug: log the timestamp to see its format
+        console.log("Raw timestamp:", entry.timestamp);
+        
+        // Convert to milliseconds and add exactly 30 years (1995 -> 2025)
+        const date = new Date((entry.timestamp * 1000) + (30 * 365 * 24 * 60 * 60 * 1000));
+        
+        timeCell.textContent = `${entry.date} `+ date.toLocaleTimeString();
       } else {
         timeCell.textContent = "N/A";
       }
 
       const statusCell = document.createElement("td");
-      statusCell.textContent = entry.motion;
+      if (entry.motion === "Motion detected") {
+        const statusBadge = document.createElement("span");
+        statusBadge.textContent = entry.motion;
+        statusBadge.className = "motion-detected";
+        statusCell.appendChild(statusBadge);
+      } else {
+        const statusBadge = document.createElement("span");
+        statusBadge.textContent = entry.motion;
+        statusBadge.className = "no-motion";
+        statusCell.appendChild(statusBadge);
+      }
 
       row.appendChild(timeCell);
       row.appendChild(statusCell);
