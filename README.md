@@ -5,4 +5,5 @@ This is very useful in motion detection at places where no cameras are available
 ## Applications: 
 1.Used in 4 wheelers such as cars where it helps the user to park cars at parking easily.
 
-# Working: The buzzers starts making sound when the objects comes too close to the vehicle thus helping the driver in smmoth parking of vehicles.
+## Working: 
+The buzzers starts making sound when the objects comes too close to the vehicle thus helping the driver in smmoth parking of vehicles.
