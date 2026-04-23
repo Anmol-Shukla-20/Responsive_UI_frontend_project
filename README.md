@@ -1,4 +1,5 @@
-Created and implemented a Responsive UI that shows the realtime data sent to the database through PIR sensor readings ie attached further to the circuit. This is a part of my IOT Project " WIFI BASED MOTION DETECTION AND ALARMING SYSTEM USING PIR SENSORS AND BUZZERS" done by me.
+## What I did?
+Created and implemented a Responsive UI that shows the real-time data sent to the database through PIR sensor readings ie attached further to the circuit. This is a part of my IOT Project " WIFI BASED MOTION DETECTION AND ALARMING SYSTEM USING PIR SENSORS AND BUZZERS" done by me.
 
 This is very useful in motion detection at places where no cameras are available(such as in home to secure it from burglars etc.)
 
